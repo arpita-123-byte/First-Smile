@@ -1,0 +1,198 @@
+<html>
+<head>
+    <title>Product Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #c4e538;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 20px auto;
+            display: block;
+            padding: 5px 10px;
+        }
+        .product-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product-card {
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+            width: 200px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        .product-card:hover img {
+            transform: scale(1.1);
+        }
+        .product-info {
+            margin-top: 10px;
+            text-align: left;
+        }
+        .product-info p {
+            margin: 5px 0;
+        }
+        .highlight-box {
+            border-radius: 15px;
+            padding: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section-title">
+            ADD PRODUCTS HERE
+        </div>
+        <div class="product-grid" id="add-products-here">
+            <!-- Products will be added here by JavaScript -->
+        </div>
+        <div class="highlight-box">
+            <div class="section-title">
+                ADDED PRODUCTS
+            </div>
+            <div class="product-grid" id="added-products">
+                <!-- Products will be added here by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const products = [
+            {
+                imgSrc: "https://storage.googleapis.com/a1aa/image/UsQan4gDSf1ZdSpYkwEkpzYb252ukkWBvO8o9sS8fUYN5fdnA.jpg",
+                altText: "Baby in white outfit holding an orange toy",
+                size: "NM",
+                price: "₹59",
+                color: "Pink, Orange"
+            },
+            {
+                imgSrc: "https://storage.googleapis.com/a1aa/image/62VggGDRqa7vBN7WyiVcuH5sfBVG54b2icoCP5HcOJ8D9fuTA.jpg",
+                altText: "Baby in colorful outfit standing",
+                size: "NM",
+                price: "₹59",
+                color: "Pink, Orange"
+            },
+            {
+                imgSrc: "https://storage.googleapis.com/a1aa/image/a2Ecustx2d5FKdp1NF2ezoNZaIQVqIdqRYgNi3se6HXJ6fdnA.jpg",
+                altText: "Baby in colorful outfit with black pants",
+                size: "NM",
+                price: "₹59",
+                color: "Pink, Orange"
+            },
+            {
+                imgSrc: "https://storage.googleapis.com/a1aa/image/vMvGgn1Vxa5mMBqRJYxudwfddcKkUR8puSIpDzm3rmKF9fuTA.jpg",
+                altText: "Baby in white and blue outfit with shorts",
+                size: "NM",
+                price: "₹59",
+                color: "Pink, Orange"
+            },
+            {
+                imgSrc: "https://storage.googleapis.com/a1aa/image/mlO5XnhEKDbiENuU6BY7Wn3ldEcw99fgoDIE9CC21Mdk8fuTA.jpg",
+                altText: "Baby in colorful outfit sitting",
+                size: "NM",
+                price: "₹59",
+                color: "Pink, Orange"
+            },
+            {
+                imgSrc: "https://storage.googleapis.com/a1aa/image/UsQan4gDSf1ZdSpYkwEkpzYb252ukkWBvO8o9sS8fUYN5fdnA.jpg",
+                altText: "Baby in white outfit holding an orange toy",
+                size: "NM",
+                price: "₹59",
+                color: "Pink, Orange"
+            },
+            {
+                imgSrc: "https://storage.googleapis.com/a1aa/image/62VggGDRqa7vBN7WyiVcuH5sfBVG54b2icoCP5HcOJ8D9fuTA.jpg",
+                altText: "Baby in colorful outfit standing",
+                size: "NM",
+                price: "₹59",
+                color: "Pink, Orange"
+            },
+            {
+                imgSrc: "https://storage.googleapis.com/a1aa/image/a2Ecustx2d5FKdp1NF2ezoNZaIQVqIdqRYgNi3se6HXJ6fdnA.jpg",
+                altText: "Baby in colorful outfit with black pants",
+                size: "NM",
+                price: "₹59",
+                color: "Pink, Orange"
+            },
+            {
+                imgSrc: "https://storage.googleapis.com/a1aa/image/vMvGgn1Vxa5mMBqRJYxudwfddcKkUR8puSIpDzm3rmKF9fuTA.jpg",
+                altText: "Baby in white and blue outfit with shorts",
+                size: "NM",
+                price: "₹59",
+                color: "Pink, Orange"
+            },
+            {
+                imgSrc: "https://storage.googleapis.com/a1aa/image/mlO5XnhEKDbiENuU6BY7Wn3ldEcw99fgoDIE9CC21Mdk8fuTA.jpg",
+                altText: "Baby in colorful outfit sitting",
+                size: "NM",
+                price: "₹59",
+                color: "Pink, Orange"
+            }
+        ];
+
+        function createProductCard(product) {
+            const productCard = document.createElement('div');
+            productCard.className = 'product-card';
+
+            const img = document.createElement('img');
+            img.src = product.imgSrc;
+            img.alt = product.altText;
+            img.height = 300;
+            img.width = 200;
+            productCard.appendChild(img);
+
+            const productInfo = document.createElement('div');
+            productInfo.className = 'product-info';
+
+            const size = document.createElement('p');
+            size.textContent = `Size: ${product.size}`;
+            productInfo.appendChild(size);
+
+            const price = document.createElement('p');
+            price.textContent = `Price: ${product.price}`;
+            productInfo.appendChild(price);
+
+            const color = document.createElement('p');
+            color.textContent = `Color: ${product.color}`;
+            productInfo.appendChild(color);
+
+            productCard.appendChild(productInfo);
+
+            return productCard;
+        }
+
+        const addProductsHere = document.getElementById('add-products-here');
+        const addedProducts = document.getElementById('added-products');
+
+        products.slice(0, 5).forEach(product => {
+            addProductsHere.appendChild(createProductCard(product));
+        });
+
+        products.slice(5).forEach(product => {
+            addedProducts.appendChild(createProductCard(product));
+        });
+    </script>
+</body>
+</html>

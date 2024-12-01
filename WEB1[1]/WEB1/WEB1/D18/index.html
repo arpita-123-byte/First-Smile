@@ -1,0 +1,473 @@
+<html>
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+ html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+html, body {
+    overflow-x: hidden;  /* Hides horizontal scrollbar */
+}
+
+body {
+    min-height: 100vh;  /* Makes sure the page is at least as tall as the viewport */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+       /* Header Section */
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #d9f99d;
+    /* border-radius: 5px; */
+} 
+
+.search-contact {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-contact input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.icon-container {
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    color: black;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: #ff7f11; /* Color on hover */
+}
+
+
+
+        .product-container {
+            display: flex;
+            padding: 20px;
+        }
+        .product-image {
+            width: 300px;
+            height: 400px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: #888;
+        }
+        .product-details {
+            margin-left: 20px;
+        }
+        .product-details h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .product-details .price {
+            font-size: 24px;
+            color: #000;
+            margin: 10px 0;
+        }
+        .product-details .stars {
+            color: #f8d64e;
+        }
+        .product-details .quantity {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        .product-details .quantity button {
+            background-color: #28a745;
+            border: none;
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+            color: #fff;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin: 0 5px;
+            font-size: 14px;
+            width: 30px;
+            height: 30px;
+        }
+        .product-details .quantity button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+        .product-details .quantity input {
+            width: 40px;
+            height: 40px;
+            padding: 5px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0 5px;
+            -moz-appearance: textfield;
+        }
+        .product-details .quantity input::-webkit-outer-spin-button,
+        .product-details .quantity input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .product-details .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .product-details .buttons .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        .product-details .buttons button {
+            background-color: #28a745;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            cursor: pointer;
+            color: #fff;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 150px;
+        }
+        .product-details .buttons button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+        .product-details .buttons .wishlist,
+        .product-details .buttons .my-wishlist {
+            background-color: #c1e1c1;
+            color: #000;
+        }
+        .product-details .buttons .wishlist:hover,
+        .product-details .buttons .my-wishlist:hover {
+            background-color: #a8d5a8;
+        }
+        .product-details .buttons .buy-now {
+            background-color: #ff5733;
+            color: #fff;
+            width: 150px;
+        }
+        .product-details .buttons .buy-now:hover {
+            background-color: #e04e2a;
+        }
+        .product-details .features {
+            margin: 10px 0;
+        }
+        .product-details .features ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        .product-details .delivery {
+            color: #007bff;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+        }
+        .product-details .delivery i {
+            margin-right: 5px;
+        }
+        /* Container for all related products */
+.related-products {
+    padding: 20px;
+    text-align: center;
+}
+
+.related-products h2 {
+    margin-bottom: 20px;
+}
+
+.products {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Individual product styling */
+.product {
+    background-color: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.product:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+
+.product img {
+    width: 100%;
+    height: 200px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+.product p {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.product .price {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.product .stars {
+    color: #f5a623;
+    margin-top: 5px;
+}
+
+        .share-icons {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .share-icons p {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .share-icons a {
+            color: inherit;
+            text-decoration: none;
+        }
+        .share-icons i {
+            font-size: 24px;
+            margin: 0 10px;
+            cursor: pointer;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .share-icons i:hover {
+            color: #007bff;
+            transform: scale(1.2);
+        }
+  </style>
+ </head>
+ <body>
+    <script src="script.js"></script>
+    <header>
+        <div class="logo">
+            <img src="Firstsmile.png" alt="FirstSmile Logo">
+        </div>
+        <nav>
+            <ul>
+                <ul>
+                    <li><a href="../D1/index.html">Home</a></li>
+                    <li><a href="../D7/index.html">Girls</a></li>
+                    <li><a href="../D26/index.html">Boys</a></li>
+                    <li><a href="../D5/index.html">About Us</a></li>
+                    <li><a href="../D30/index.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="search-contact">
+                <input type="text" placeholder="Search...">
+                <div class="icon-container">
+                    <a href="../D25/index.html" class="icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <a href="../D4/index.html" class="icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                    <a href="../D2/index.html" class="icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+    
+
+  <div class="product-container">
+   <div class="product-image">
+    <img src="https://storage.googleapis.com/a1aa/image/esLzPV09zgXBUSvIWyQktOdNVbkPyIUj6tCvbN4pevQisPwTA.jpg" alt="Main Product Image" style="width: 100%; height: 100%; object-fit: cover; border-radius: 10px;">
+    
+   </div>
+   <div class="product-details">
+    <h1>
+     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur.
+    </h1>
+    <div class="price">
+     $ 70
+    </div>
+    <div class="stars">
+     <i class="fas fa-star">
+     </i>
+     <i class="fas fa-star">
+     </i>
+     <i class="fas fa-star">
+     </i>
+     <i class="fas fa-star">
+     </i>
+     <i class="fas fa-star-half-alt">
+     </i>
+    </div>
+    <div class="quantity">
+    <label for="quantity">Quantity</label>
+    <div class="quantity-controls">
+        <button id="minus">-</button>
+        <input id="quantity" min="1" name="quantity" type="number" value="1"/>
+        <button id="plus">+</button>
+    </div>
+</div>
+
+    <div class="buttons">
+     <div class="button-group">
+      <button id="addToCart">
+       ADD TO CART
+      </button>
+      <button class="my-wishlist">
+       MY WISHLIST
+      </button>
+      <button id="addToWishlist" class="wishlist">
+       ADD TO WISHLIST
+      </button>
+     </div>
+     <button class="buy-now">
+      BUY IT NOW
+     </button>
+    </div>
+    <div class="features">
+     <ul>
+      <li>
+       100% Original Products
+      </li>
+      <li>
+       Cash on Delivery Available
+      </li>
+      <li>
+       Easy 7-day Returns and Exchanges
+      </li>
+     </ul>
+    </div>
+    <div class="delivery">
+     <i class="fas fa-truck">
+     </i>
+     <p>
+      Estimated delivery between 10 Sept - 16 Sept
+     </p>
+    </div>
+   </div>
+  </div>
+  <div class="related-products">
+    <h2>Related Products:</h2>
+    <div class="products">
+        <div class="product">
+            <a href="../D22/index.html">
+              <img src="https://storage.googleapis.com/a1aa/image/gJLzVVVUpI54A1mA3NWpw4qCemJzxtGv5pj5JfC54mcgWmuTA.jpg" alt="Related Product 1">
+            </a>
+              <p>Lorem ipsum dolor sit amet, consectetur</p>
+              <div class="price">$50</div>
+              <div class="stars">
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star-half-alt"></i>
+              </div>
+           </div>
+           <div class="product">
+            <a href="../D23/index.html">
+              <img src="https://storage.googleapis.com/a1aa/image/StfJkZqMy60hXqpfID0VazoMeTyG9pNqOY6A1GepQBAexy0dC.jpg" alt="Related Product 2">
+            </a>
+              <p>Lorem ipsum dolor sit amet, consectetur</p>
+              <div class="price">$60</div>
+              <div class="stars">
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star-half-alt"></i>
+              </div>
+           </div>
+           <div class="product">
+            <a href="../D24/index.html">
+              <img src="https://storage.googleapis.com/a1aa/image/NZrQOJ1L6LoTAhEy4auB5stC2OLFCs0SJVI1eHbME2rOLT3JA.jpg" alt="Related Product 3">
+            </a>
+              <p>Lorem ipsum dolor sit amet, consectetur</p>
+              <div class="price">$55</div>
+              <div class="stars">
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star"></i>
+                 <i class="fas fa-star-half-alt"></i>
+              </div>
+           </div>
+        </div>
+     </div>
+     
+ 
+  
+ </body>
+</html>

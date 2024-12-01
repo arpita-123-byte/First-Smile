@@ -1,0 +1,526 @@
+<html>
+ <head>
+  <title>
+   Shopping Cart
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        header .logo img {
+            width: 150px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: background 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #d9f99d;
+        }
+        .search-contact {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .search-contact input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .icon-container {
+            display: flex;
+            gap: 15px;
+        }
+        .icon-container a {
+            color: black;
+            font-size: 20px;
+            text-decoration: none;
+        }
+        .main {
+            padding: 20px;
+        }
+        .breadcrumb {
+            font-size: 14px;
+            color: #666;
+        }
+        .breadcrumb a {
+            color: #666;
+            text-decoration: none;
+        }
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        .shopping-cart {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .cart-items {
+            width: 65%;
+        }
+        .cart-items table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .cart-items th, .cart-items td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .cart-items th {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .cart-items td img {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+        }
+        .cart-items .quantity {
+            display: flex;
+            align-items: center;
+        }
+        .cart-items .quantity button {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .cart-items .quantity input {
+            width: 30px;
+            text-align: center;
+            border: 1px solid #ddd;
+            margin: 0 5px;
+        }
+        .cart-items .remove {
+            color: #ff0000;
+            cursor: pointer;
+        }
+        .summary {
+            width: 30%;
+            background-color: #d3e400;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .summary h2 {
+            margin-top: 0;
+            color: #333;
+        }
+        .summary .totals {
+            margin-top: 20px;
+        }
+        .summary .totals div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .summary .totals div span {
+            color: #333;
+        }
+        .summary .coupon {
+            display: flex;
+            margin-top: 20px;
+        }
+        .summary .coupon input {
+            flex: 1;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+        }
+        .summary .coupon button {
+            background-color: #00b300;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+            color: #fff;
+        }
+        .summary .payment-methods {
+            margin-top: 20px;
+        }
+        .summary .payment-methods label {
+            display: block;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .summary .checkout {
+            background-color: #00b300;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            margin-top: 20px;
+        }
+        .update-cart {
+            background-color: #00b300;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            color: #fff;
+            margin-top: 20px;
+            text-align: center;
+        }
+        /* Footer Styles */
+        .footer {
+            background-color: #222;
+            color: #fff;
+            padding: 40px 20px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+        .footer-section h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .footer-section p a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .footer-section p a:hover {
+            color: #fff;
+        }
+        .footer-logo {
+            width: 100px;
+            margin: 0 auto 10px;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .social-icons a {
+            color: #ccc;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+        /* Animation for social media icons */
+        .social-icons a:hover {
+            color: #fff;
+            transform: scale(1.2); /* Slightly enlarges icon on hover */
+        }
+        .terms {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .terms a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .terms a:hover {
+            color: #fff;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="logo">
+    <img alt="FirstSmile Logo" src="Screenshot 2024-10-02 084804.png"/>
+   </div>
+   <nav>
+    <ul>
+        <ul>
+            <li><a href="../D1/index.html">Home</a></li>
+            <li><a href="../D7/index.html">Girls</a></li>
+            <li><a href="../D26/index.html">Boys</a></li>
+            <li><a href="../D5/index.html">About Us</a></li>
+            <li><a href="../D30/index.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="search-contact">
+        <input type="text" placeholder="Search...">
+        <div class="icon-container">
+            <a href="../D25/index.html" class="icon">
+                <i class="fas fa-heart"></i>
+            </a>
+            <a href="../D4/index.html" class="icon">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <a href="../D2/index.html" class="icon">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </div>
+</header>
+  <div class="main">
+   <div class="breadcrumb">
+    <a href="#">
+     Home
+    </a>
+    /
+    <a href="#">
+     Online store
+    </a>
+    /
+    <a href="#">
+     Cart
+    </a>
+   </div>
+   <h1>
+    Shopping Cart
+   </h1>
+   <div class="shopping-cart">
+    <div class="cart-items">
+     <table>
+      <thead>
+       <tr>
+        <th>
+         Product
+        </th>
+        <th>
+         Price
+        </th>
+        <th>
+         Quantity
+        </th>
+        <th>
+         Subtotal
+        </th>
+       </tr>
+      </thead>
+      <tbody>
+       <tr>
+        <td>
+         <img alt="Baby Clothes 1" height="50" src="https://storage.googleapis.com/a1aa/image/mrHUMIIZ807EIlqKz90C2UHuWNoyJUYTTrxHUmtMm3X6847E.jpg" width="50"/>
+         Lorem Ipsum amet
+        </td>
+        <td>
+         $85
+        </td>
+        <td class="quantity">
+         <button class="decrease">
+          -
+         </button>
+         <input type="text" value="3"/>
+         <button class="increase">
+          +
+         </button>
+        </td>
+        <td class="subtotal">
+         $255
+        </td>
+        <td class="remove">
+         X
+        </td>
+       </tr>
+       <tr>
+        <td>
+         <img alt="Baby Clothes 2" height="50" src="https://storage.googleapis.com/a1aa/image/7Sedsnbd8uzemE0DkUOkHiLEX7VQ2N6sW36DHWD4tiKozjvTA.jpg" width="50"/>
+         Lorem Ipsum amet
+        </td>
+        <td>
+         $75
+        </td>
+        <td class="quantity">
+         <button class="decrease">
+          -
+         </button>
+         <input type="text" value="3"/>
+         <button class="increase">
+          +
+         </button>
+        </td>
+        <td class="subtotal">
+         $225
+        </td>
+        <td class="remove">
+         X
+        </td>
+       </tr>
+      </tbody>
+     </table>
+     <button class="update-cart">
+      UPDATE CART
+     </button>
+    </div>
+    <div class="summary">
+     <h2>
+      SUMMARY
+     </h2>
+     <div class="totals">
+      <div>
+       <span>
+        Subtotal
+       </span>
+       <span class="subtotal-amount">
+        $480.00
+       </span>
+      </div>
+      <div>
+       <span>
+        Tax
+       </span>
+       <span class="tax-amount">
+        $50.00
+       </span>
+      </div>
+      <div>
+       <span>
+        Shipping Fee
+       </span>
+       <span class="shipping-amount">
+        $50.00
+       </span>
+      </div>
+      <div>
+       <span>
+        Order Total
+       </span>
+       <span class="order-total">
+        $580.00
+       </span>
+      </div>
+     </div>
+     <div class="coupon">
+      <input placeholder="Coupon Code" type="text"/>
+      <button>
+       Apply
+      </button>
+     </div>
+     <div class="payment-methods">
+      <label>
+       <input name="payment" type="radio" value="cod"/>
+       Cash on Delivery
+      </label>
+      <label>
+       <input name="payment" type="radio" value="card"/>
+       Visa Card/ Master Card
+      </label>
+      <label>
+       <input name="payment" type="radio" value="netbanking"/>
+       Net Banking
+      </label>
+      <label>
+       <input name="payment" type="radio" value="upi"/>
+       UPI
+      </label>
+     </div>
+     <button class="checkout">
+      PROCEED TO CHECKOUT
+     </button>
+    </div>
+   </div>
+  </div>
+  <footer>
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <p><a href="../D7/index.html">Girls</a></p>
+                <p><a href="../D26/index.html">Boys</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <p><a href="../D5/index.html">About Us</a></p>
+                <p><a href="../D30/index.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <img src="Firstsmile.png" alt="Firstsmile Logo" class="footer-logo">
+                <h3>Visit Us</h3>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p class="terms">
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Conditions</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    
+</footer>
+  <script>
+   document.querySelectorAll('.quantity button').forEach(button => {
+        button.addEventListener('click', function() {
+            const input = this.parentElement.querySelector('input');
+            let quantity = parseInt(input.value);
+            if (this.classList.contains('increase')) {
+                quantity++;
+            } else if (this.classList.contains('decrease') && quantity > 1) {
+                quantity--;
+            }
+            input.value = quantity;
+
+            const price = parseFloat(this.parentElement.parentElement.querySelector('td:nth-child(2)').innerText.replace('$', ''));
+            const subtotal = price * quantity;
+            this.parentElement.parentElement.querySelector('.subtotal').innerText = `$${subtotal.toFixed(2)}`;
+
+            updateTotals();
+        });
+    });
+
+    document.querySelectorAll('.remove').forEach(button => {
+        button.addEventListener('click', function() {
+            this.parentElement.remove();
+            updateTotals();
+        });
+    });
+
+    function updateTotals() {
+        let subtotal = 0;
+        document.querySelectorAll('.subtotal').forEach(subtotalElement => {
+            subtotal += parseFloat(subtotalElement.innerText.replace('$', ''));
+        });
+
+        const tax = 50.00;
+        const shipping = 50.00;
+        const total = subtotal + tax + shipping;
+
+        document.querySelector('.subtotal-amount').innerText = `$${subtotal.toFixed(2)}`;
+        document.querySelector('.tax-amount').innerText = `$${tax.toFixed(2)}`;
+        document.querySelector('.shipping-amount').innerText = `$${shipping.toFixed(2)}`;
+        document.querySelector('.order-total').innerText = `$${total.toFixed(2)}`;
+    }
+  </script>
+ </body>
+</html>

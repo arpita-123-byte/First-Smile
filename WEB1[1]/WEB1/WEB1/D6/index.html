@@ -1,0 +1,360 @@
+
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Firstsmile
+  </title>
+  <link href="globals.css" rel="stylesheet"/>
+  <link href="styleguide.css" rel="stylesheet"/>
+  <link href="D6.CSS" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   /* Reset some default margins */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fff;
+        }
+
+        /* Header Section */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        header .logo img {
+            width: 150px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: background 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #d9f99d;
+        }
+
+        .search-contact {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .search-contact input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .icon-container {
+            display: flex;
+            gap: 15px;
+        }
+
+        .icon {
+            color: black;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+
+        .icon:hover {
+            color: #ff7f11;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px 60px;
+            background-color: #d3e88b;
+        }
+
+        .hero-text {
+            max-width: 50%;
+            font-family: 'Kaushan Script', cursive;
+            color: #000;
+        }
+
+        .hero-text h1 {
+            font-size: 55px;
+            margin-bottom: 15px;
+            font-weight: 400;
+            color: #1e8e02;
+        }
+
+        .hero-text p {
+            font-size: 22px;
+            margin-bottom: 40px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .get-started-btn {
+            padding: 15px 50px;
+            background-color: #d39191;
+            border: none;
+            border-radius: 35px;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .get-started-btn:hover {
+            background-color: #b97d7d;
+        }
+
+        .hero-image img {
+            width: 467px;
+            height: 583px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-image {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Adjust image height responsiveness */
+        @media (max-width: 768px) {
+            .hero-section {
+                flex-direction: column;
+            }
+
+            .hero-image img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #222;
+            color: #fff;
+            padding: 40px 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+
+        .footer-section h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .footer-section p a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-section p a:hover {
+            color: #fff;
+        }
+
+        .footer-logo {
+            width: 100px;
+            margin: 0 auto 10px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .social-icons a {
+            color: #ccc;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #fff;
+            transform: scale(1.2);
+        }
+
+        .terms {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .terms a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .terms a:hover {
+            color: #fff;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="logo">
+    <img alt="FirstSmile Logo - A smiling baby face with a pacifier" height="75" src="Screenshot 2024-10-02 084804.png" width="150"/>
+   </div>
+   <nav>
+    <ul>
+        <ul>
+            <li><a href="../D1/index.html">Home</a></li>
+            <li><a href="../D7/index.html">Girls</a></li>
+            <li><a href="../D26/index.html">Boys</a></li>
+            <li><a href="../D5/index.html">About Us</a></li>
+            <li><a href="../D30/index.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="search-contact">
+        <input type="text" placeholder="Search...">
+        <div class="icon-container">
+            <a href="../D25/index.html" class="icon">
+                <i class="fas fa-heart"></i>
+            </a>
+            <a href="../D4/index.html" class="icon">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <a href="../D2/index.html" class="icon">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </div>
+</header>
+  <main>
+   <section class="hero-section">
+    <div class="hero-text">
+     <h1>
+      Shop With Confidence, Love With Joy
+     </h1>
+     <p>
+      Caring for your baby, one smile at a time. Explore our handpicked selection of baby products.
+     </p>
+     <a href="../D1/index.html"> 
+     <button class="get-started-btn">
+      GET STARTED
+     </button>
+    </a>
+    </div>
+    <div class="hero-image">
+     <img alt="Baby Image - A happy baby sitting on a soft blanket" height="583" src="https://storage.googleapis.com/a1aa/image/eETwAH8tLfncd0wfOWJeEZ4u2k2HHxsQyLZf3C5lVWHeU557E.jpg" width="467"/>
+    </div>
+   </section>
+  </main>
+  <footer>
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <p><a href="../D7/index.html">Girls</a></p>
+                <p><a href="../D26/index.html">Boys</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <p><a href="../D5/index.html">About Us</a></p>
+                <p><a href="../D30/index.html">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <img src="Firstsmile.png" alt="Firstsmile Logo" class="footer-logo">
+                <h3>Visit Us</h3>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p class="terms">
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Conditions</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    
+</footer>
+ <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>

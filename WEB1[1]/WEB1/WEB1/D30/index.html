@@ -1,0 +1,181 @@
+<html>
+ <head>
+  <title>
+   Contact Us - Firstsmile
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        header .logo img {
+            width: 150px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: background 0.3s ease;
+        }
+        nav ul li a:hover {
+            background-color: #d9f99d;
+        }
+        .search-contact {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .search-contact input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .icon-container {
+            display: flex;
+            gap: 15px;
+        }
+        .icon {
+            color: black;
+            font-size: 20px;
+            transition: color 0.3s ease;
+        }
+        .icon:hover {
+            color: #ff7f11;
+        }
+        .contact-section {
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            padding: 50px 0;
+        }
+        .contact-section h1 {
+            color: #00aaff;
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+        .contact-section .contact-info {
+            display: flex;
+            justify-content: space-around;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .contact-section .contact-info div {
+            width: 30%;
+            transition: transform 0.3s ease;
+        }
+        .contact-section .contact-info div i {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        .contact-section .contact-info div h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .contact-section .contact-info div p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class="logo">
+    <img alt="FirstSmile Logo" src="4.png"/>
+   </div>
+   <nav>
+    <ul>
+        <ul>
+            <li><a href="../D1/index.html">Home</a></li>
+            <li><a href="../D7/index.html">Girls</a></li>
+            <li><a href="../D26/index.html">Boys</a></li>
+            <li><a href="../D5/index.html">About Us</a></li>
+            <li><a href="../D30/index.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <div class="search-contact">
+        <input type="text" placeholder="Search...">
+        <div class="icon-container">
+            <a href="../D25/index.html" class="icon">
+                <i class="fas fa-heart"></i>
+            </a>
+            <a href="../D4/index.html" class="icon">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+            <a href="../D2/index.html" class="icon">
+                <i class="fas fa-user"></i>
+            </a>
+        </div>
+    </div>
+</header>
+  <div class="contact-section">
+   <h1>
+    Contact Us.
+   </h1>
+   <div class="contact-info">
+    <div class="contact-item" id="reach-us">
+     <i class="fas fa-map-marker-alt">
+     </i>
+     <h2>
+      Reach Us
+     </h2>
+     <p>
+      BML Munjal University 67th Milestone, NH 48, Kapriwas, Haryana 122413
+     </p>
+    </div>
+    <div class="contact-item" id="call-us">
+     <i class="fas fa-phone-alt">
+     </i>
+     <h2>
+      Call Us
+     </h2>
+     <p>
+      +91 9856432457
+      <br/>
+      +91 7865432890
+     </p>
+    </div>
+    <div class="contact-item" id="mail-us">
+     <i class="fas fa-envelope">
+     </i>
+     <h2>
+      Mail Us
+     </h2>
+     <p>
+      service@Firstsmile.in
+      <br/>
+      support@Firstsmile.in
+     </p>
+    </div>
+   </div>
+  </div>
+  <script>
+   document.querySelectorAll('.contact-item').forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.style.transform = 'scale(1.1)';
+            });
+            item.addEventListener('mouseout', () => {
+                item.style.transform = 'scale(1)';
+            });
+        });
+  </script>
+ </body>
+</html>

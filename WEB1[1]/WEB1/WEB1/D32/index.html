@@ -1,0 +1,78 @@
+<html>
+ <head>
+  <title>
+   Firstsmile
+  </title>
+  <style>
+   body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('b.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 150px;
+        }
+        .question {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .option {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #000;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+  </style>
+  <script>
+   function handleButtonClick(role) {
+            alert("You clicked: " + role);
+        }
+  </script>
+ </head>
+ <body>
+  <div class="container">
+   <div class="logo">
+    <img alt="Firstsmile Logo" height="50" src="Screenshot 2024-10-02 084804.png" width="150"/>
+   </div>
+   <div class="question">
+    ARE YOU
+   </div>
+   <button class="button" onclick="handleButtonClick('A BUYER')">
+    A BUYER
+   </button>
+   <div class="question">
+    OR
+   </div>
+   <button class="button" onclick="handleButtonClick('A SELLER')">
+    A SELLER?
+   </button>
+  </div>
+ </body>
+</html>

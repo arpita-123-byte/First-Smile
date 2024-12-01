@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        header .logo img {
+            width: 150px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: background 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: #d9f99d;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        .filters {
+            width: 20%;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+
+        .products {
+            width: 80%;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .product-card {
+            width: 30%;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card img.hovered {
+            transform: scale(1.1);
+        }
+
+        .footer {
+            background-color: #222;
+            color: #fff;
+            padding: 40px 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin: 10px;
+        }
+
+        .footer-section h3 {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .footer-section p a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-section p a:hover {
+            color: #fff;
+        }
+
+        .footer-logo {
+            width: 100px;
+            margin: 0 auto 10px;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .social-icons a {
+            color: #ccc;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #fff;
+            transform: scale(1.2);
+        }
+
+        .terms {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .terms a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .terms a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img alt="FirstSmile Logo" src="2.png"/>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../D1/index.html">Home</a></li>
+                <li><a href="../D7/index.html">Girls</a></li>
+                <li><a href="../D26/index.html">Boys</a></li>
+                <li><a href="../D5/index.html">About Us</a></li>
+                <li><a href="../D30/index.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="search-contact">
+            <input type="text" placeholder="Search...">
+            <div class="icon-container">
+                <a href="../D25/index.html" class="icon">
+                    <i class="fas fa-heart"></i>
+                </a>
+                <a href="../D4/index.html" class="icon">
+                    <i class="fas fa-shopping-cart"></i>
+                </a>
+                <a href="../D2/index.html" class="icon">
+                    <i class="fas fa-user"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <aside class="filters">
+            <h3>Filters</h3>
+            <div class="sizes">
+                <h4>Size</h4>
+                <button>XS</button>
+                <button>S</button>
+                <button>M</button>
+            </div>
+            <div class="colors">
+                <h4>Color</h4>
+                <div style="background-color: #ff0000;"></div>
+                <div style="background-color: #00ff00;"></div>
+                <div style="background-color: #0000ff;"></div>
+                <div style="background-color: #ffff00;"></div>
+                <div style="background-color: #ff00ff;"></div>
+                <div style="background-color: #00ffff;"></div>
+            </div>
+            <div class="prices">
+                <h4>Prices</h4>
+                <p>$0-$20</p>
+                <p>$20-$50</p>
+                <p>$50-$80</p>
+                <p>$80-$150</p>
+                <p>$150-$200</p>
+            </div>
+        </aside>
+        <section class="products" id="product-list">
+            <!-- Products will be dynamically inserted here -->
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <p><a href="../D7/index.html">Girls</a></p>
+                    <p><a href="../D26/index.html">Boys</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
+                    <p><a href="../D5/index.html">About Us</a></p>
+                    <p><a href="../D30/index.html">Contact Us</a></p>
+                </div>
+                <div class="footer-section">
+                    <img src="Firstsmile.png" alt="Firstsmile Logo" class="footer-logo">
+                    <h3>Visit Us</h3>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p class="terms">
+                        <a href="#">Terms</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Conditions</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        
+    </footer>
+    <script>
+        // Product class to represent individual products
+        class Product {
+            constructor(image, title, price) {
+                this.image = image;
+                this.title = title;
+                this.price = price;
+            }
+
+            // Method to render the product card
+            render() {
+                return `
+                    <div class="product-card">
+                        <img alt="${this.title}" src="${this.image}" width="300" height="400"/>
+                        <div class="details">
+                            <h4>${this.title}</h4>
+                            <p class="price">₹${this.price}</p>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // ProductList class to manage and display products
+        class ProductList {
+            constructor(products) {
+                this.products = products;
+            }
+
+            // Method to render all products
+            render() {
+                const productListElement = document.getElementById('product-list');
+                this.products.forEach(product => {
+                    productListElement.innerHTML += product.render();
+                });
+            }
+        }
+
+        // Create Product instances
+        const products = [
+            new Product('https://storage.googleapis.com/a1aa/image/fKDyR4OriWTvaqawfUivb49JT0mhMackFvAf2ewHzFoawP7OB.jpg', 'Lorem ipsum dolor sit amet', 250),
+            new Product('https://storage.googleapis.com/a1aa/image/bL8jF4Dg8XpPJdu9BeANpYTyL6mlr6lDfFPanf3AbVqI4ndnA.jpg', 'Consetetur sadipscing', 350),
+            new Product('https://storage.googleapis.com/a1aa/image/bL8jF4Dg8XpPJdu9BeANpYTyL6mlr6lDfFPanf3AbVqI4ndnA.jpg', 'Consetetur sadipscing', 350),
+            new Product('https://storage.googleapis.com/a1aa/image/GKirIxCBtfwzGaRGPBrQ7djJBm5gegJ1OzDJShtUpCgA8zuTA.jpg', 'Product 4', 500),
+            new Product('https://storage.googleapis.com/a1aa/image/oguOJy1B9vIhIBWV4SyfH3b3246Hn9GMoCFfNzSi80DJ8zuTA.jpg', 'Product 5', 600),
+            new Product('https://storage.googleapis.com/a1aa/image/e59b7Wixur34OyQrfvAESi0oXWg32TYZroOwU9n1ameR4ndnA.jpg', 'Product 6', 700)
+        ];
+
+        // Instantiate ProductList and render products
+        const productList = new ProductList(products);
+        productList.render();
+
+        // Hover effect for images
+        const images = document.querySelectorAll('.product-card img');
+        images.forEach(image => {
+            image.addEventListener('mouseenter', () => {
+                image.classList.add('hovered');
+            });
+            image.addEventListener('mouseleave', () => {
+                image.classList.remove('hovered');
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+
+
+
+

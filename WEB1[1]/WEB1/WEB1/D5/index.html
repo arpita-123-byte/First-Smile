@@ -1,0 +1,443 @@
+<html>
+ <head>
+  <title>
+   Firstsmile
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+    html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    
+}
+html, body {
+    overflow-x: hidden;  /* Hides horizontal scrollbar */
+}
+
+body {
+    min-height: 100vh;  /* Makes sure the page is at least as tall as the viewport */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+header .logo img {
+    width: 150px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #d9f99d;
+    /* border-radius: 5px; */
+} 
+
+.search-contact {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-contact input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.icon-container {
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    color: black;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: #ff7f11; /* Color on hover */
+}
+       
+        .welcome-section {
+            background-color: #e6ee9c;
+            padding: 20px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        .welcome-section .text {
+            flex: 1;
+            padding-right: 20px;
+            text-align: center;
+        }
+        .welcome-section img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+        .about-section {
+            display: flex;
+            background-color: #e6ee9c;
+            color: #000;
+            padding: 0;
+        }
+        .about-section .about-title {
+            flex: 1;
+            background-color: #a52a2a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            font-size: 28px; /* Slightly bigger font size */
+            font-weight: bold;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            margin-left: -20px;
+            width: 120px; /* Reduce width */
+        }
+        .about-section .about-text {
+            flex: 2;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .about-section .about-box {
+            flex: 1;
+            background-color: #a52a2a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 24px;
+            height: 400px;
+            width: 120px; /* Reduce width */
+        }
+        .team-section {
+            display: flex;
+            padding: 20px;
+            background-color: #8c6577;
+            position: relative;
+            margin-top: -20px; /* Attach to the about section */
+        }
+        .team-section .team-images {
+            flex: 3;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .team-section .team-images img.baby {
+            width: 25%;
+            height: 100%;
+            margin: 0;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            border-radius: 10px;
+        }
+        .team-section .team-images .professional-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-left: 25%; /* Adjust this value to separate from the baby image */
+            width: 75%;
+            position: relative;
+            z-index: 1;
+            justify-content: center;
+        }
+        .team-section .team-images .professional-container .professional-row {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            justify-content: center;
+        }
+        .team-section .team-images .professional-container .professional-row img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 10px;
+        }
+        .team-section .team-images .professional-center {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        .team-section .team-images .professional-center img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 10px;
+        }
+        .team-section .team-text {
+            flex: 1;
+            background-color: #8c6577;
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px; /* Slightly bigger font size */
+            font-weight: bold;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            margin-left: -20px;
+        }
+        .subscribe-section {
+            background-color: #832929;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .subscribe-section p {
+            margin: 0;
+            font-size: 20px; /* Increase font size */
+        }
+        .subscribe-section button {
+            background-color: #d32f2f;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 10px; /* Make button edges curvy */
+            transition: background-color 0.3s ease; /* Add hover effect */
+        }
+        .subscribe-section button:hover {
+            background-color: #b71c1c; /* Darker shade on hover */
+        }
+        /* Footer Styles */
+/* Footer Styles */
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer-section p a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section p a:hover {
+    color: #fff;
+}
+
+.footer-logo {
+    width: 100px;
+    margin: 0 auto 10px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.social-icons a {
+    color: #ccc;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Animation for social media icons */
+.social-icons a:hover {
+    color: #fff;
+    transform: scale(1.2); /* Slightly enlarges icon on hover */
+}
+
+.terms {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.terms a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.terms a:hover {
+    color: #fff;
+}
+  </style>
+ </head>
+ <body>
+    <script src="script.js"></script>
+  
+    <header>
+        <div class="logo">
+            <img src="Firstsmile.png" alt="FirstSmile Logo">
+        </div>
+        <nav>
+            <ul>
+                <ul>
+                    <li><a href="../D1/index.html">Home</a></li>
+                    <li><a href="../D7/index.html">Girls</a></li>
+                    <li><a href="../D26/index.html">Boys</a></li>
+                    <li><a href="../D5/index.html">About Us</a></li>
+                    <li><a href="../D30/index.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="search-contact">
+                <input type="text" placeholder="Search...">
+                <div class="icon-container">
+                    <a href="../D25/index.html" class="icon">
+                        <i class="fas fa-heart"></i>
+                    </a>
+                    <a href="../D4/index.html" class="icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                    <a href="../D2/index.html" class="icon">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+  <div class="welcome-section">
+   <div class="text">
+    <h1>
+     Welcome To Firstsmile
+    </h1>
+    <p>
+     Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis porro consectetur atque ut velit. Facere autem tempore fugiat qui placeat, culpa, consequuntur, error quo ab cum iusto assumenda.
+    </p>
+   </div>
+   <img alt="Smiling baby in a blue outfit" height="300" src="https://storage.googleapis.com/a1aa/image/iCz5mw6uufyeS06eYlV2O8oVlBYATZFHjcHcoaoSXjdctVdnA.jpg" width="300"/>
+  </div>
+  <div class="about-section">
+   <div class="about-title">
+    ABOUT US
+   </div>
+   <div class="about-text">
+    <p>
+     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis porro consectetur atque ut velit. Facere autem tempore fugiat qui placeat, culpa, consequuntur, error quo ab cum iusto assumenda. Facere autem tempore fugiat qui placeat, culpa, consequuntur, error quo ab cum iusto assumenda. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis porro consectetur atque ut velit. Facere autem tempore fugiat qui placeat, culpa, consequuntur, error quo ab cum iusto assumenda.
+    </p>
+   </div>
+   <div class="about-box">
+   </div>
+  </div>
+  <div class="team-section">
+   <div class="team-images">
+    <img alt="Smiling baby in denim overalls" class="baby" src="https://storage.googleapis.com/a1aa/image/J4DaR9Fp9eVqR6vxGOAJQh0PAGHF2qnpzvv4cnWmSbVYbV3JA.jpg"/>
+    <div class="professional-container">
+     <div class="professional-row">
+      <img alt="Professional woman smiling" class="professional" height="200" src="https://storage.googleapis.com/a1aa/image/QUfgIvSsQcTdMqFqXOycdluE8JWFbpkMqlfPO6JR8TAt2quTA.jpg" width="200"/>
+      <img alt="Professional woman smiling" class="professional" height="200" src="https://storage.googleapis.com/a1aa/image/QUfgIvSsQcTdMqFqXOycdluE8JWFbpkMqlfPO6JR8TAt2quTA.jpg" width="200"/>
+     </div>
+     <div class="professional-center">
+      <img alt="Professional woman smiling" class="professional" height="200" src="https://storage.googleapis.com/a1aa/image/QUfgIvSsQcTdMqFqXOycdluE8JWFbpkMqlfPO6JR8TAt2quTA.jpg" width="200"/>
+     </div>
+    </div>
+   </div>
+   <div class="team-text">
+    TEAM MEMBERS
+   </div>
+  </div>
+  <div class="subscribe-section">
+   <p>
+    Subscribe to Our Firstsmile And get 10% off
+   </p>
+   <button>
+    SUBSCRIBE
+   </button>
+  </div>
+  <footer>
+    <div class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Shop</h3>
+                <p><a href="#">Girls</a></p>
+                <p><a href="#">Boys</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Company</h3>
+                <p><a href="#">About Us</a></p>
+                <p><a href="#">Contact Us</a></p>
+            </div>
+            <div class="footer-section">
+                <img src="Firstsmile.png" alt="Firstsmile Logo" class="footer-logo">
+                <h3>Visit Us</h3>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <p class="terms">
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Conditions</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    
+</footer>
+ </body>
+</html>
