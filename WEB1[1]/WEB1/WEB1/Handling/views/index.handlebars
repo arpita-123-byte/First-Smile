@@ -1,0 +1,39 @@
+<aside class="filters">
+    <h3>Filters</h3>
+    <div class="sizes">
+        <h4>Size</h4>
+        {{#each sizes}}
+        <button>{{this}}</button>
+        {{/each}}
+    </div>
+    <div class="colors">
+        <h4>Color</h4>
+        {{#each colors}}
+        <div style="background-color: {{this}};"></div>
+        {{/each}}
+    </div>
+    <div class="prices">
+        <h4>Prices</h4>
+        {{#each prices}}
+        <p>{{this}}</p>
+        {{/each}}
+    </div>
+</aside>
+
+<section class="products">
+    {{#each products}}
+    <div class="product-card">
+        <img src="{{imageUrl}}" alt="{{altText}}" />
+        <div class="details">
+            <h4>{{title}}</h4>
+            <p class="price">{{price}}</p>
+            <div class="stars">
+                {{#each stars}}
+                <i class="{{this}}"></i>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</section>
+

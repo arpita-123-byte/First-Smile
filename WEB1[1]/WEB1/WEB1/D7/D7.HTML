@@ -7,48 +7,78 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"/>
     <style>
-        body {
+       
+   body {
             font-family: 'Roboto', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #fff;
         }
+       /* Header Section */
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
 
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
+header .logo img {
+    width: 150px;
+}
 
-        header .logo img {
-            width: 150px;
-        }
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+}
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-            margin: 0;
-        }
+nav ul li {
+    display: inline;
+}
 
-        nav ul li {
-            display: inline;
-        }
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background 0.3s ease;
+}
 
-        nav ul li a {
-            text-decoration: none;
-            color: black;
-            font-size: 16px;
-            font-weight: bold;
-            padding: 10px 15px;
-            transition: background 0.3s ease;
-        }
+nav ul li a:hover {
+    background-color: #d9f99d;
+    /* border-radius: 5px; */
+} 
 
-        nav ul li a:hover {
-            background-color: #d9f99d;
-        }
+.search-contact {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-contact input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.icon-container {
+    display: flex;
+    gap: 15px;
+}
+
+.icon {
+    color: black;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: #ff7f11; /* Color on hover */
+}
 
         .container {
             display: flex;
@@ -315,7 +345,7 @@
         const products = [
             new Product('https://storage.googleapis.com/a1aa/image/fKDyR4OriWTvaqawfUivb49JT0mhMackFvAf2ewHzFoawP7OB.jpg', 'Lorem ipsum dolor sit amet', 250),
             new Product('https://storage.googleapis.com/a1aa/image/bL8jF4Dg8XpPJdu9BeANpYTyL6mlr6lDfFPanf3AbVqI4ndnA.jpg', 'Consetetur sadipscing', 350),
-            new Product('https://storage.googleapis.com/a1aa/image/bL8jF4Dg8XpPJdu9BeANpYTyL6mlr6lDfFPanf3AbVqI4ndnA.jpg', 'Consetetur sadipscing', 350),
+            new Product('https://storage.googleapis.com/a1aa/image/S8jTUjRs4VISIJvFS4OKfcOxLyRlknRvhPy4fhlv4e1C4ndnA.jpg', 'Consetetur sadipscing', 350),
             new Product('https://storage.googleapis.com/a1aa/image/GKirIxCBtfwzGaRGPBrQ7djJBm5gegJ1OzDJShtUpCgA8zuTA.jpg', 'Product 4', 500),
             new Product('https://storage.googleapis.com/a1aa/image/oguOJy1B9vIhIBWV4SyfH3b3246Hn9GMoCFfNzSi80DJ8zuTA.jpg', 'Product 5', 600),
             new Product('https://storage.googleapis.com/a1aa/image/e59b7Wixur34OyQrfvAESi0oXWg32TYZroOwU9n1ameR4ndnA.jpg', 'Product 6', 700)

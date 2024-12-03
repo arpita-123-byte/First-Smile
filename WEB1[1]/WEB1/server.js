@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const crudOperations = require("./WEB1/Dbcon/index");
 
 const app = express();
 
@@ -28,5 +29,7 @@ app.get('/', (req, res) => {
 
 const PORT = 3000;
 app.listen(PORT, () => {
+    crudOperations();
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+

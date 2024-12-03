@@ -1,0 +1,20 @@
+<header>
+    <div class="logo">
+        <img src="<%= logoUrl %>" alt="FirstSmile Logo" />
+    </div>
+    <nav>
+        <ul>
+            <% navLinks.forEach(link => { %>
+            <li><a href="<%= link.href %>"><%= link.text %></a></li>
+            <% }) %>
+        </ul>
+    </nav>
+    <div class="search-contact">
+        <input type="text" placeholder="Search..." />
+        <div class="icon-container">
+            <% icons.forEach(icon => { %>
+            <a href="<%= icon.href %>" class="icon"><i class="<%= icon.iconClass %>"></i></a>
+            <% }) %>
+        </div>
+    </div>
+</header>

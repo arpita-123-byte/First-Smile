@@ -1,56 +1,47 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Search functionality (simple placeholder for now)
-    const searchInput = document.querySelector('input[type="text"]');
-    searchInput.addEventListener('input', () => {
-        console.log('Searching for:', searchInput.value);
-    });
+document.addEventListener("DOMContentLoaded", function () {
+    // Select the form and add an event listener for submission
+    const form = document.querySelector("form");
 
-    // Shopping Cart (removed alert functionality)
-    const cartIcon = document.querySelector('.fa-shopping-cart');
-    cartIcon.addEventListener('click', () => {
-        // Placeholder for shopping cart functionality
-        console.log('Shopping Cart icon clicked');
-    });
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevents the default form submission
 
-    // Like/Heart Icon (removed alert functionality)
-    const heartIcon = document.querySelector('.fa-heart');
-    heartIcon.addEventListener('click', () => {
-        // Placeholder for wishlist functionality
-        console.log('Heart icon clicked');
-    });
+        // Get input values
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword = document.getElementById("confirm-password").value;
 
-    // User Profile (removed alert functionality)
-    const userIcon = document.querySelector('.fa-user');
-    userIcon.addEventListener('click', () => {
-        // Placeholder for user profile functionality
-        console.log('User Profile icon clicked');
-    });
-
-    // Subscribe Button functionality
-    const subscribeButton = document.querySelector('.subscribe-section button');
-    subscribeButton.addEventListener('click', () => {
-        const userEmail = prompt('Enter your email to subscribe:');
-        if (userEmail) {
-            alert(`Thank you for subscribing, ${userEmail}! You get 10% off.`);
+        // Simple validation
+        if (!email || !password || !confirmPassword) {
+            alert("Please fill in all fields.");
+            return;
         }
+
+        // Validate email format
+        if (!validateEmail(email)) {
+            alert("Please enter a valid email address.");
+            return;
+        }
+
+        // Check if passwords match
+        if (password !== confirmPassword) {
+            alert("Passwords do not match.");
+            return;
+        }
+
+        // You can add more complex validation here (e.g., password strength)
+
+        // If validation passes, simulate a successful sign-up (you can replace this with an actual registration process)
+        // alert("Sign-up successful!");
+
+        // Optionally, redirect to the login page or another page after successful sign-up
+        window.location.href = "../D1/index.html";  // Redirect to login page after sign-up
     });
 
-    // Footer social media links
-    const socialLinks = document.querySelectorAll('.social-icons a');
-    socialLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            alert(`Redirecting to ${e.target.href}`);
-        });
-    });
-
-    // Hide horizontal scrollbar, allow vertical scrolling
-    document.body.style.overflowX = 'hidden';  // Hides horizontal scrollbar
-    document.documentElement.style.overflowX = 'hidden';  // Hides horizontal scrollbar
-
-    // If you want to allow horizontal scrolling again, you can set:
-    // document.body.style.overflowX = 'auto';
-    // document.documentElement.style.overflowX = 'auto';
+    // Email format validation function
+    function validateEmail(email) {
+        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        return emailPattern.test(email);
+    }
 });
 
 

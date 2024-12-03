@@ -1,0 +1,14 @@
+<footer>
+    <div class="footer">
+        <div class="footer-content">
+            <% footerSections.forEach(section => { %>
+            <div class="footer-section">
+                <h3><%= section.heading %></h3>
+                <% section.links.forEach(link => { %>
+                <p><a href="<%= link.href %>"><%= link.text %></a></p>
+                <% }) %>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</footer>

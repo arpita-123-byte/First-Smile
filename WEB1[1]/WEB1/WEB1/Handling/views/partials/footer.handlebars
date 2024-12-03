@@ -1,0 +1,14 @@
+<footer>
+    <div class="footer">
+        <div class="footer-content">
+            {{#each footerSections}}
+            <div class="footer-section">
+                <h3>{{heading}}</h3>
+                {{#each links}}
+                <p><a href="{{href}}">{{text}}</a></p>
+                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</footer>

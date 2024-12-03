@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Select the form and add an event listener
     const form = document.querySelector("form");
 
     form.addEventListener("submit", function (event) {
@@ -15,15 +14,14 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Additional validation can be added here (like email format checking)
+        // Validate email format
         if (!validateEmail(email)) {
             alert("Please enter a valid email address.");
             return;
         }
 
-        // If validation passes, simulate successful login
-        alert("Login successful!");
-        // Add further logic here to handle successful login
+        // If validation passes, trigger the link click
+        window.location.href = "../D1/index.html";  // Redirect to D1
     });
 
     // Email format validation function
